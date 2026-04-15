@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://prostoblog.site',
   credentials: true
 }));
 app.use(session({
@@ -21,7 +21,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: false, // для локальной разработки, в продакшене true с HTTPS
+    secure: true, // для локальной разработки, в продакшене true с HTTPS
     maxAge: 1000 * 60 * 60 * 24 // 24 часа
   }
 }));
