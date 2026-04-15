@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
+app.set('trust proxy', 1);
 app.use(cors({
   origin: 'https://prostoblog.site',
   credentials: true
